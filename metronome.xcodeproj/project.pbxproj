@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4DA58E7E1DC40B1E0073058D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA58E7D1DC40B1E0073058D /* AppDelegate.swift */; };
-		4DA58E801DC40B1E0073058D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA58E7F1DC40B1E0073058D /* ViewController.swift */; };
+		4DA58E801DC40B1E0073058D /* MetronomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA58E7F1DC40B1E0073058D /* MetronomeViewController.swift */; };
 		4DA58E831DC40B1E0073058D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA58E811DC40B1E0073058D /* Main.storyboard */; };
 		4DA58E851DC40B1E0073058D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA58E841DC40B1E0073058D /* Assets.xcassets */; };
 		4DA58E881DC40B1E0073058D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA58E861DC40B1E0073058D /* LaunchScreen.storyboard */; };
 		4DA58E931DC40B1E0073058D /* metronomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA58E921DC40B1E0073058D /* metronomeTests.swift */; };
 		4DA58E9E1DC40B1E0073058D /* metronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA58E9D1DC40B1E0073058D /* metronomeUITests.swift */; };
+		4DA58EAE1DC414140073058D /* Metronome.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4DA58EAC1DC414140073058D /* Metronome.wav */; };
+		4DA58EAF1DC414140073058D /* MetronomeUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4DA58EAD1DC414140073058D /* MetronomeUp.wav */; };
+		4DA58EB31DCA8A120073058D /* ic_play_arrow_36pt.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 4DA58EB21DCA8A120073058D /* ic_play_arrow_36pt.imageset */; };
+		4DA58EB51DCA8A330073058D /* ic_stop_36pt.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 4DA58EB41DCA8A330073058D /* ic_stop_36pt.imageset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		4DA58E7A1DC40B1E0073058D /* metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA58E7D1DC40B1E0073058D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DA58E7F1DC40B1E0073058D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DA58E7F1DC40B1E0073058D /* MetronomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewController.swift; sourceTree = "<group>"; };
 		4DA58E821DC40B1E0073058D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA58E841DC40B1E0073058D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA58E871DC40B1E0073058D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		4DA58E991DC40B1E0073058D /* metronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = metronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA58E9D1DC40B1E0073058D /* metronomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metronomeUITests.swift; sourceTree = "<group>"; };
 		4DA58E9F1DC40B1E0073058D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA58EAC1DC414140073058D /* Metronome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Metronome.wav; path = "../../../../../Downloads/Metronome Sounds Collection for Ableton Live/Ableton (DEFAULT)/Metronome.wav"; sourceTree = "<group>"; };
+		4DA58EAD1DC414140073058D /* MetronomeUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = MetronomeUp.wav; path = "../../../../../Downloads/Metronome Sounds Collection for Ableton Live/Ableton (DEFAULT)/MetronomeUp.wav"; sourceTree = "<group>"; };
+		4DA58EB21DCA8A120073058D /* ic_play_arrow_36pt.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ic_play_arrow_36pt.imageset; path = ../../../../../Downloads/ic_play_arrow_black_36dp/ios/ic_play_arrow_36pt.imageset; sourceTree = "<group>"; };
+		4DA58EB41DCA8A330073058D /* ic_stop_36pt.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ic_stop_36pt.imageset; path = ../../../../../Downloads/ic_stop_black_36dp/ios/ic_stop_36pt.imageset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,9 @@
 		4DA58E7C1DC40B1E0073058D /* metronome */ = {
 			isa = PBXGroup;
 			children = (
+				4DA58EAB1DC413B20073058D /* Resources */,
 				4DA58E7D1DC40B1E0073058D /* AppDelegate.swift */,
-				4DA58E7F1DC40B1E0073058D /* ViewController.swift */,
+				4DA58E7F1DC40B1E0073058D /* MetronomeViewController.swift */,
 				4DA58E811DC40B1E0073058D /* Main.storyboard */,
 				4DA58E841DC40B1E0073058D /* Assets.xcassets */,
 				4DA58E861DC40B1E0073058D /* LaunchScreen.storyboard */,
@@ -123,6 +132,17 @@
 				4DA58E9F1DC40B1E0073058D /* Info.plist */,
 			);
 			path = metronomeUITests;
+			sourceTree = "<group>";
+		};
+		4DA58EAB1DC413B20073058D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DA58EB41DCA8A330073058D /* ic_stop_36pt.imageset */,
+				4DA58EB21DCA8A120073058D /* ic_play_arrow_36pt.imageset */,
+				4DA58EAC1DC414140073058D /* Metronome.wav */,
+				4DA58EAD1DC414140073058D /* MetronomeUp.wav */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA58E881DC40B1E0073058D /* LaunchScreen.storyboard in Resources */,
+				4DA58EAF1DC414140073058D /* MetronomeUp.wav in Resources */,
 				4DA58E851DC40B1E0073058D /* Assets.xcassets in Resources */,
 				4DA58E831DC40B1E0073058D /* Main.storyboard in Resources */,
+				4DA58EAE1DC414140073058D /* Metronome.wav in Resources */,
+				4DA58EB31DCA8A120073058D /* ic_play_arrow_36pt.imageset in Resources */,
+				4DA58EB51DCA8A330073058D /* ic_stop_36pt.imageset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA58E801DC40B1E0073058D /* ViewController.swift in Sources */,
+				4DA58E801DC40B1E0073058D /* MetronomeViewController.swift in Sources */,
 				4DA58E7E1DC40B1E0073058D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
