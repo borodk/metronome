@@ -14,6 +14,7 @@ class MetronomeViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var bpmLabel: UILabel!
     
+    var isOn = false
     var player: AVAudioPlayer?
     var timer: Timer!
     var tempo: TimeInterval = 130.0
@@ -25,16 +26,19 @@ class MetronomeViewController: UIViewController {
     }
     
     @IBAction func btnPressed(_ sender: UIButton) {
-        if sender.currentTitle == "play" {
-            sender.setTitle("stop", for: UIControlState.normal)
+        if isOn == true {
+            isOn = false
+            timer.invalidate()
+            sender.setImage(UIImage(named:"ic_play_arrow_36pt_2x.png"), for: UIControlState.normal)
+            print(isOn)
+        } else {
+            isOn = true
+            sender.setImage(UIImage(named:"ic_stop_36pt_2x.png"), for: UIControlState.normal)
             let metronomeTimeInterval:TimeInterval = 60.0 / tempo
             timer = Timer.scheduledTimer(timeInterval: metronomeTimeInterval, target: self, selector: #selector(MetronomeViewController.playSound), userInfo: nil, repeats: true)
             timer.fire()
-            playSound();
-        }
-        else {
-            sender.setTitle("play", for: UIControlState.normal)
-            timer.invalidate()
+            playSound()
+            print(isOn)
         }
     }
     
