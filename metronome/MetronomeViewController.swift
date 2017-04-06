@@ -20,7 +20,7 @@ class MetronomeViewController: UIViewController {
     var tempo: TimeInterval = 130.0
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-        var currentValue = Int(sender.value)
+        let currentValue = Int(sender.value)
         bpmLabel.text = "\(currentValue)"
         tempo = Double(currentValue)
     }
@@ -30,15 +30,12 @@ class MetronomeViewController: UIViewController {
             isOn = false
             timer.invalidate()
             sender.setImage(UIImage(named:"ic_play_arrow_36pt_2x.png"), for: UIControlState.normal)
-            print(isOn)
         } else {
             isOn = true
             sender.setImage(UIImage(named:"ic_stop_36pt_2x.png"), for: UIControlState.normal)
             let metronomeTimeInterval:TimeInterval = 60.0 / tempo
             timer = Timer.scheduledTimer(timeInterval: metronomeTimeInterval, target: self, selector: #selector(MetronomeViewController.playSound), userInfo: nil, repeats: true)
             timer.fire()
-            playSound()
-            print(isOn)
         }
     }
     
